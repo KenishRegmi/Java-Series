@@ -8,14 +8,19 @@ let str2 = "world"
 let str3 = str1 + " " + str2
 console.log(str3);
 
-console.log("5" + 1); // "51"
-console.log("5" - 1); // 4
-console.log("5" * 2); // 10
-console.log(1+1)    // 2
-console.log(1-1)    // 0
-console.log(1*1)    // 1
-console.log(1/1)    // 1
-console.log(5%2)    // 1
-console.log(5**2)   // 25
-console.log("1"+2+2); // "122"
-console.log(1+2+"2"); // "32"
+// console.log("5" + 1); // "51"
+// console.log("5" - 1); // 4
+// console.log("5" * 2); // 10
+// console.log(1+1)    // 2
+// console.log(1-1)    // 0
+// console.log(1*1)    // 1
+// console.log(1/1)    // 1
+// console.log(5%2)    // 1
+// console.log(5**2)   // 25
+// console.log("1"+2+2); // "122"
+// console.log(1+2+"2"); // "32"
+
+//never write the code like this it is not a good format
+
+console.log(true)
+console.log(+""); // 0
