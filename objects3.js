@@ -1,4 +1,4 @@
-// Destructuring 
+// Destructuring of object
 
 const course = {
     title: "JavaScript - The Complete Guide",
