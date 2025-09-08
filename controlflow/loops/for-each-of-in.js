@@ -50,7 +50,9 @@ const code = ['js', 'py', 'cpp', 'java'];
 code.forEach((element, index) => {
     console.log(`${index} : ${element}`);
 });
-
+// element stores the value of the current element
+// index stores the index of the current element
+// In the above code element stores the value like js, py, cpp, java and index stores the index like 0,1,2,3
 
 const multiObj = [
     {

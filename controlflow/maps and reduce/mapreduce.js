@@ -29,5 +29,8 @@ numbers.forEach((num) => {
 })
 console.log(newNums);
 
+//.filter() is better than forEach() because filter() returns a new array and forEach() doesn't return anything
+//Syntax of .filter() is .filter(callback(element, index, array), thisArg) and forEach() is .forEach((element, index, array) => { // code to be executed }, thisArg)
+
 
 
