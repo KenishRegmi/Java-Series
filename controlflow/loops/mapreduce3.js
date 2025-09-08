@@ -2,6 +2,10 @@
 //accumulator is like a container that holds the value
 //current value is the current element being processed in the array
 
+
+
+//Syntax: array.reduce(callback(accumulator, currentValue, index, array), initialValue)
+//initialValue is optional
 const nums = [1,2,3,4,5];
 const sum = nums.reduce(function (acc, curval) {
     console.log(acc, curval);

@@ -1,5 +1,6 @@
 //------------------------------ for of loop ------------------------------
-
+//Syntax: for (variable of iterable) { // code to be executed }
+//iterable can be an array, string, map, set, etc.
 const myarr = [1,2,3,4,5];
 
 for (const num of myarr) {
