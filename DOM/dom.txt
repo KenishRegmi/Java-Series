@@ -1,0 +1,16 @@
+use document at start like document.innerHTML(), document.getElementid()
+
+
+.innerHTML
+it gives the HTML of the selected id
+
+.getElementId()
+-selecting or targeting the element id
+
+.querySelector() (h1,h2...........) you can choose anything
+-give the first whatever you choose
+
+.querySelectorAll()
+-this selects all the content whatever you selected
+
+
