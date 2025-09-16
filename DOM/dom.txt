@@ -13,4 +13,5 @@ it gives the HTML of the selected id
 .querySelectorAll()
 -this selects all the content whatever you selected
 
-
+.getAttributeid()
+-this give the id 
