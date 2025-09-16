@@ -15,3 +15,299 @@ it gives the HTML of the selected id
 
 .getAttributeid()
 -this give the id 
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM Example</title>
+</head>
+<body>
+  <h1 id="title">Hello World</h1>
+
+  <div class="week">
+    <div class="day">Monday</div>
+    <div class="day">Tuesday</div>
+    <div class="day">Wednesday</div>
+  </div>
+
+  <input type="text" id="myInput" value="Type here">
+
+  <button id="myBtn">Click Me</button>
+
+  <script>
+    // 1. Select by id
+    let title = document.getElementById("title");
+    title.innerHTML = "Changed Title with innerHTML";
+
+    // 2. Select all with querySelectorAll
+    let days = document.querySelectorAll(".day");
+    days.forEach(day => {
+      console.log(day.innerText); // logs Monday, Tuesday, Wednesday
+    });
+
+    // 3. Change style
+    title.style.color = "blue";
+
+    // 4. Get and set attribute
+    let input = document.getElementById("myInput");
+    console.log(input.getAttribute("value")); // "Type here"
+    input.setAttribute("value", "New Value");
+
+    // 5. Add event listener
+    let btn = document.getElementById("myBtn");
+    btn.addEventListener("click", () => {
+      alert("Button was clicked!");
+    });
+
+    // 6. Create and add new element
+    let newDay = document.createElement("div");
+    newDay.innerText = "Thursday";
+    document.querySelector(".week").appendChild(newDay);
+  </script>
+</body>
+</html>
+
+👉 This tiny code shows you:
+
+.querySelectorAll → selecting all .day
+
+.innerHTML / .innerText → changing text/HTML
+
+.getAttribute / .setAttribute
+
+.style → change CSS
+
+.addEventListener → click event
+
+.createElement + .appendChild → adding new element
+
+Got it 👍 You want a **complete reference notes + examples** for all the most common DOM methods/properties — not just `.querySelectorAll` and `.innerHTML`, but also `.outerHTML`, `.getElementById`, `.classList`, `.value`, `.parentElement`, etc.
+
+Here’s a **clean notes file** (you can copy-paste into `.txt`) with **short explanations + code examples**.
+
+---
+
+# 🌐 JavaScript DOM Notes (Quick Reference)
+
+## 1. Selecting Elements
+
+* **`document.getElementById("id")`**
+  Selects **1 element by ID**.
+
+  ```js
+  let el = document.getElementById("title");
+  ```
+
+* **`document.getElementsByClassName("class")`**
+  Selects elements by class. Returns an **HTMLCollection**.
+
+  ```js
+  let items = document.getElementsByClassName("day");
+  ```
+
+* **`document.getElementsByTagName("tag")`**
+  Selects elements by tag (e.g., `div`, `p`).
+
+  ```js
+  let divs = document.getElementsByTagName("div");
+  ```
+
+* **`document.querySelector("selector")`**
+  Selects the **first element** that matches CSS selector.
+
+  ```js
+  let firstDay = document.querySelector(".day");
+  ```
+
+* **`document.querySelectorAll("selector")`**
+  Selects **all matching elements**. Returns a **NodeList**.
+
+  ```js
+  let days = document.querySelectorAll(".day");
+  days.forEach(d => console.log(d.innerText));
+  ```
+
+---
+
+## 2. Content Manipulation
+
+* **`.innerHTML`** → Get/Set **HTML inside** element
+
+  ```js
+  el.innerHTML = "<b>Hello</b>";
+  ```
+
+* **`.innerText`** → Get/Set **visible text only** (ignores hidden text & HTML).
+
+  ```js
+  el.innerText = "Hello World";
+  ```
+
+* **`.textContent`** → Get/Set **all text** (includes hidden).
+
+  ```js
+  el.textContent = "Full text";
+  ```
+
+* **`.outerHTML`** → Gets/sets **entire element including itself**.
+
+  ```js
+  console.log(el.outerHTML); // <h1 id="title">Hello</h1>
+  ```
+
+---
+
+## 3. Attributes
+
+* **`.getAttribute("name")`**
+
+  ```js
+  let val = el.getAttribute("id");
+  ```
+
+* **`.setAttribute("name", "value")`**
+
+  ```js
+  el.setAttribute("class", "highlight");
+  ```
+
+* **`.removeAttribute("name")`**
+
+  ```js
+  el.removeAttribute("class");
+  ```
+
+---
+
+## 4. Styles
+
+* **`.style.property = "value"`**
+
+  ```js
+  el.style.color = "red";
+  el.style.backgroundColor = "yellow";
+  ```
+
+* **`.classList.add("class")`**
+
+  ```js
+  el.classList.add("active");
+  ```
+
+* **`.classList.remove("class")`**
+
+  ```js
+  el.classList.remove("active");
+  ```
+
+* **`.classList.toggle("class")`**
+
+  ```js
+  el.classList.toggle("dark-mode");
+  ```
+
+---
+
+## 5. Working with Inputs
+
+* **`.value`** → Get/set input value
+
+  ```js
+  let input = document.getElementById("myInput");
+  console.log(input.value);
+  input.value = "New text";
+  ```
+
+* **`.checked`** → For checkboxes/radio buttons
+
+  ```js
+  console.log(myCheckbox.checked);
+  ```
+
+---
+
+## 6. DOM Tree Navigation
+
+* **`.parentElement`** → Parent node
+
+  ```js
+  console.log(el.parentElement);
+  ```
+
+* **`.children`** → Child elements
+
+  ```js
+  console.log(el.children);
+  ```
+
+* **`.firstElementChild` / `.lastElementChild`**
+
+  ```js
+  console.log(el.firstElementChild);
+  ```
+
+* **`.nextElementSibling` / `.previousElementSibling`**
+
+  ```js
+  console.log(el.nextElementSibling);
+  ```
+
+---
+
+## 7. Creating & Removing
+
+* **`document.createElement("tag")`**
+
+  ```js
+  let newDiv = document.createElement("div");
+  ```
+
+* **`.appendChild(element)`**
+
+  ```js
+  document.body.appendChild(newDiv);
+  ```
+
+* **`.append("text" or element)`** (can append multiple)
+
+  ```js
+  el.append("Some text", newDiv);
+  ```
+
+* **`.prepend(element)`**
+  Adds at the start of parent.
+
+* **`.remove()`**
+
+  ```js
+  el.remove();
+  ```
+
+---
+
+## 8. Events
+
+* **`.addEventListener("event", function)`**
+
+  ```js
+  el.addEventListener("click", () => {
+    alert("Clicked!");
+  });
+  ```
+
+* Common Events:
+
+  * `click` → when clicked
+  * `mouseover` / `mouseout` → hover effects
+  * `keydown` / `keyup` → keyboard
+  * `change` → for inputs
+  * `submit` → forms
+
+---
+
+✅ With this, you have a **mini reference book** for DOM!
+It includes `.querySelectorAll`, `.innerHTML`, `.outerHTML`, `.getElementById`, and all the other essentials.
+
