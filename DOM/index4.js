@@ -15,3 +15,20 @@ function langopti(langname){
 }
 
 langopti('React JS')
+
+//editing addding and removing value
+const secondlan = document.querySelector('li:nth-child(2)')
+// secondlan.innerHTML = 'Mojo'
+const newli = document.createElement('li')
+newli.textContent = 'Mojo'
+secondlan.replaceWith(newli)
+
+//edit
+const firstlan = document.querySelector('li:first-child')
+firstlan.outerHTML = '<li>TypeScript</li>'
+
+//remove
+const lastlan = document.querySelector('li:last-child')
+lastlan.remove()
+
+

@@ -311,3 +311,5 @@ Here’s a **clean notes file** (you can copy-paste into `.txt`) with **short ex
 ✅ With this, you have a **mini reference book** for DOM!
 It includes `.querySelectorAll`, `.innerHTML`, `.outerHTML`, `.getElementById`, and all the other essentials.
 
+#idName → selects an element with a specific id.
+document.querySelector('#height') // selects <input id="height">
