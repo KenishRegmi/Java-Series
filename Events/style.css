@@ -1,62 +1,85 @@
-/* Reset some default browser styles */
+/* Universal Styles */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Body setup */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
+    background: #101010;
+    font-family: Arial, sans-serif;
+    color: #fff;
+    padding: 20px;
 }
 
-/* Logo styling */
+/* Header/Logo Styles */
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #222;
-  margin-bottom: 20px;
-  text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2.5rem;
+    color: #4CAF50; /* A green color for the logo */
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
 }
 
-/* Hero container */
+/* Search Bar Styles */
+.search {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.search label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+#engine {
+    width: 60%;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 25px;
+    background: #333;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#engine:focus {
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); /* Glowing effect on focus */
+}
+
+/* Image Gallery Styles */
 .hero-one {
-  width: 100%;
-  max-width: 1000px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
-  padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* Image list */
 .img-list {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
 }
 
-/* Images inside list */
+.img-list li {
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.img-list li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
 .img-list img {
-  border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-/* Hover effect */
-.img-list img:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+    display: block;
+    width: 100%;
+    height: 200px; /* Consistent height for all images */
+    object-fit: cover; /* Ensures images fill the container without distortion */
+    border-radius: 8px;
 }
