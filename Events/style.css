@@ -1,0 +1,62 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body setup */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Logo styling */
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Hero container */
+.hero-one {
+  width: 100%;
+  max-width: 1000px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+/* Image list */
+.img-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  justify-items: center;
+}
+
+/* Images inside list */
+.img-list img {
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.img-list img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}
