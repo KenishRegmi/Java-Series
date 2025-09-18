@@ -1,0 +1,10 @@
+Javascript Async Code 
+
+Javascript---->Synchronous-----> Execute by one by one code
+          ---->Single Thread----> Execute in a single Thread
+
+Execution Context-----> Execute one line of a code at a time
+                 ----->Console log-1
+                 ------>Console log-2
+                
+
