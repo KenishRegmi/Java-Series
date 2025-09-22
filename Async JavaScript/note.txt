@@ -1,5 +1,5 @@
 Javascript Async Code 
-
+--------------------------Default Javascript Behaviour--------------------------
 Javascript---->Synchronous-----> Execute by one by one code
           ---->Single Thread----> Execute in a single Thread
 
@@ -7,4 +7,16 @@ Execution Context-----> Execute one line of a code at a time
                  ----->Console log-1
                  ------>Console log-2
                 
+Blocking code vs Non Blocking Code
 
+Blocking Code:-Block the flow of the program
+              -Read the file Synch
+
+Non Blocking Code:-Doesnot Block the Execution
+                  -Read the file Async
+
+
+
+
+
+JS Engine contains only memory heap and call stack only
